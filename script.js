@@ -8,6 +8,11 @@ function updateDisplay() {
   display.innerText = displayValue
 }
 
+const calculatorDisplay = document.querySelector('.calculator')
+calculatorDisplay.style.backgroundColor = 'pink'
+
+
+
 function appendNumber(number) {
   if (displayValue === '0') {
     displayValue = number.toString()
