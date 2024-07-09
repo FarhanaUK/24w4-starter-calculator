@@ -11,6 +11,7 @@ function updateDisplay() {
 const calculatorDisplay = document.querySelector('.calculator')
 calculatorDisplay.style.backgroundColor = 'pink'
 
+calculatorDisplay.style.boxShadow = '10px 20px 30px'
 
 
 function appendNumber(number) {
