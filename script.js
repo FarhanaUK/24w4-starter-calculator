@@ -14,6 +14,24 @@ calculatorDisplay.style.backgroundColor = 'pink'
 calculatorDisplay.style.boxShadow = '10px 20px 30px'
 
 
+
+
+
+const buttonHover = document.querySelector('.buttons')
+buttonHover.classList.add('hover')
+const hover = document.querySelector('.hover')
+
+hover.addEventListener('mouseover', evt => {
+hover.style.backgroundColor = '#FF69B4'
+})
+
+hover.addEventListener('mouseout', evt => {
+
+  hover.style.backgroundColor = ""
+})
+
+
+
 function appendNumber(number) {
   if (displayValue === '0') {
     displayValue = number.toString()
