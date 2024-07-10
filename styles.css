@@ -50,8 +50,9 @@ body {
   cursor: pointer;
 }
 
+
 .btn:hover {
-  background-color: #555;
+  background-color: greenyellow;
 }
 
 .btn-clear {
@@ -61,3 +62,7 @@ body {
 .btn-clear:hover {
   background-color: #218838;
 }
+.final {
+  grid-column: span 2; 
+
+} 

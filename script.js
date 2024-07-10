@@ -3,6 +3,7 @@ let firstOperand = null
 let secondOperand = null
 let currentOperator = null
 
+
 function updateDisplay() {
   const display = document.getElementById('display')
   display.innerText = displayValue
@@ -13,9 +14,20 @@ function updateDisplay() {
 // change color when clicked on buttons but reverts when enter or cleared
 // create a box with memory or what numbers where clicked and a clear button to clear all that is a pop up with a icon to pop up
 //2 extra button - 1 for changing calculator color and 1 for showing memory of types numbers
-
+let color = document.querySelector('.color')
 const calculatorDisplay = document.querySelector('.calculator')
+
 calculatorDisplay.style.backgroundColor = 'pink'
+
+color.addEventListener('click', evt=> {
+if(calculatorDisplay.style.backgroundColor){
+  calculatorDisplay.style.backgroundColor = "#0fd6f5"
+}else if(calculatorDisplay.style.backgroundColor === "#0fd6f5"){
+  calculatorDisplay.style.backgroundColor = "#3b8a3a"
+}
+
+})
+
 
 calculatorDisplay.style.boxShadow = '1px 1px 25px 10px'
 calculatorDisplay.style.border = "thick solid black"
@@ -61,6 +73,11 @@ footer.style.fontWeight = "bolder"
 footer.style.fontFamily = "cursive"
 footer.style.padding = "20px"
 body.appendChild(footer)
+
+
+
+
+
 
 
 function appendNumber(number) {
