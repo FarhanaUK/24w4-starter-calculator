@@ -31,6 +31,9 @@ memory.textContent = "🧠"
 newColor.insertAdjacentElement("afterend", memory)
 
 
+
+
+
 const calculatorDisplay = document.querySelector('.calculator')
 calculatorDisplay.style.backgroundColor = 'pink'
 
@@ -50,7 +53,7 @@ calculatorDisplay.style.border = "thick solid black"
 
 const body = document.querySelector('body');
 
-body.style.backgroundImage = 'url("poparts.jpg")';
+body.style.backgroundImage = 'url("popart.jpg")';
 body.style.backgroundRepeat = 'no-repeat';
 body.style.backgroundSize = 'cover';
 
@@ -72,7 +75,7 @@ hover.addEventListener('mouseout', evt => {
 const header = document.createElement('h1')
 header.classList.add('title')
 header.textContent = 'CALCULATOR!!!!'
-header.style.fontSize = "7rem"
+header.style.fontSize = "5rem"
 header.style.fontFamily = "myFont"
 header.style.textShadow = "-12px 5px #3c3ba7"
 header.style.color ="#fc30da"
@@ -80,7 +83,8 @@ header.style.display = "flex"
 header.style.justifyContent = "center"
 header.style.alignItems = "center"
 header.style.padding = "20px"
-header.style.marginTop ="-20px"
+header.style.marginTop ="0px"
+header.style.marginBottom ="0px"
 body.insertAdjacentElement('afterbegin', header)
 
 const footer = document.createElement('footer')
