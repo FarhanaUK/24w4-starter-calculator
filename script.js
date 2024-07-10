@@ -11,23 +11,39 @@ function updateDisplay() {
 
 
 // make it flip with results in the back
-// change color when clicked on buttons but reverts when enter or cleared
-// create a box with memory or what numbers where clicked and a clear button to clear all that is a pop up with a icon to pop up
-//2 extra button - 1 for changing calculator color and 1 for showing memory of types numbers
-let color = document.querySelector('.color')
-const calculatorDisplay = document.querySelector('.calculator')
 
+// create a box with memory or what numbers where clicked and a clear button to clear all that is a pop up with a icon to pop up
+
+
+
+
+const newColor = document.createElement('button')
+const btnClear = document.querySelector(".btn-clear")
+newColor.classList.add("btn")
+newColor.classList.add("color")
+newColor.textContent = "🎨"
+btnClear.insertAdjacentElement("afterend", newColor)
+
+const memory = document.createElement('button')
+memory.classList.add("btn")
+memory.classList.add("memory")
+memory.textContent = "🧠"
+newColor.insertAdjacentElement("afterend", memory)
+
+
+const calculatorDisplay = document.querySelector('.calculator')
 calculatorDisplay.style.backgroundColor = 'pink'
 
-color.addEventListener('click', evt=> {
-if(calculatorDisplay.style.backgroundColor){
-  calculatorDisplay.style.backgroundColor = "#0fd6f5"
-}else if(calculatorDisplay.style.backgroundColor === "#0fd6f5"){
-  calculatorDisplay.style.backgroundColor = "#3b8a3a"
-}
 
-})
 
+let colorIdx = 0;
+const colors = ["#91bec7", "#224523", "#ebbc9b", "black", "pink"];
+
+const newColorButton = document.querySelector('.color');
+newColorButton.addEventListener('click', evt => {
+  colorIdx = (colorIdx + 1) % colors.length;
+  calculatorDisplay.style.backgroundColor = colors[colorIdx];
+});
 
 calculatorDisplay.style.boxShadow = '1px 1px 25px 10px'
 calculatorDisplay.style.border = "thick solid black"
@@ -43,7 +59,7 @@ buttonHover.classList.add('hover')
 const hover = document.querySelector('.hover')
 
 hover.addEventListener('mouseover', evt => {
-hover.style.backgroundColor = '#FF69B4'
+hover.style.backgroundColor = 'white'
 })
 
 hover.addEventListener('mouseout', evt => {
@@ -55,7 +71,7 @@ hover.addEventListener('mouseout', evt => {
 
 const header = document.createElement('h1')
 header.classList.add('title')
-header.textContent = 'CALCULATE!!!!'
+header.textContent = 'CALCULATOR!!!!'
 header.style.fontSize = "7rem"
 header.style.fontFamily = "myFont"
 header.style.textShadow = "-12px 5px #3c3ba7"
