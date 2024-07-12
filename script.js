@@ -12,10 +12,12 @@ function updateDisplay() {
 
 
 // stop numbers when they don't fit
-//add click sound to buttons
 // create a box with memory or what numbers where clicked and a clear button to clear all that is a pop up with a icon to pop up
 // make it flip with results in the back
 // add characters pop on the side
+
+
+
 
 
 const newColor = document.createElement('button')
@@ -58,8 +60,8 @@ body.style.backgroundImage = 'url("popart.jpg")';
 body.style.backgroundRepeat = 'no-repeat';
 body.style.backgroundSize = 'cover';
 
-const buttonHover = document.querySelector('.buttons')
-buttonHover.classList.add('hover')
+const buttons = document.querySelector('.buttons')
+buttons.classList.add('hover')
 const hover = document.querySelector('.hover')
 
 hover.addEventListener('mouseover', evt => {
@@ -71,6 +73,12 @@ hover.addEventListener('mouseout', evt => {
   hover.style.backgroundColor = ""
 })
 
+function clickSound() {
+  let sound = new Audio('sound.mp3')
+  sound.play()
+}
+
+buttons.addEventListener('click', clickSound)
 
 
 const header = document.createElement('h1')
@@ -94,6 +102,8 @@ footer.style.fontWeight = "bolder"
 footer.style.fontFamily = "cursive"
 footer.style.padding = "20px"
 body.appendChild(footer)
+
+
 
 
 
