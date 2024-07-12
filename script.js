@@ -116,9 +116,19 @@ function appendNumber(number) {
     displayValue = number.toString()
   } else {
     displayValue += number.toString()
-  }
+   }
+    if(displayValue.length > 18){
+      displayValue = displayValue(0,display.maxlength)
+      
+    }
+
+
+
+  
   updateDisplay()
 }
+
+
 
 function appendOperator(operator) {
   if (currentOperator !== null) {
@@ -128,6 +138,12 @@ function appendOperator(operator) {
   currentOperator = operator
   displayValue = '0'
 }
+
+
+
+
+
+
 
 function calculate() {
   secondOperand = parseFloat(displayValue)
