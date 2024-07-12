@@ -21,16 +21,19 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
+  color: #3d1fe7;
 }
 
 .display {
   font-size: 2em;
   margin-bottom: 10px;
   padding: 10px;
-  background-color: #333;
+  background-color: #1d4ff3;
   color: #fff;
   border-radius: 5px;
   text-align: right;
+  font-family: myFont;
+  color: greenyellow
   
 }
 
@@ -48,19 +51,22 @@ body {
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
+  font-family: myFont;
+  
 }
 
 
 .btn:hover {
-  background-color: greenyellow;
+  background-color: rgb(140, 221, 19);
 }
 
 .btn-clear {
-  background-color: #149c18;
+  background-color: #f1bb07;
 }
 
 .btn-clear:hover {
-  background-color: #218838;
+  background-color: rgb(140, 221, 19);
+  ;
 }
 .final {
   grid-column: span 2; 
