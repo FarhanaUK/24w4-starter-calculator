@@ -11,10 +11,9 @@ function updateDisplay() {
 
 
 
-// stop numbers when they don't fit
-// create a box with memory or what numbers where clicked and a clear button to clear all that is a pop up with a icon to pop up
-// make it flip with results in the back
-// add characters pop on the side
+
+// create a box with music or what numbers where clicked and a clear button to clear all that is a pop up with a icon to pop up
+
 
 
 
@@ -27,11 +26,12 @@ newColor.classList.add("color")
 newColor.textContent = "🎨"
 btnClear.insertAdjacentElement("afterend", newColor)
 
-const memory = document.createElement('button')
-memory.classList.add("btn")
-memory.classList.add("memory")
-memory.textContent = "🧠"
-newColor.insertAdjacentElement("afterend", memory)
+const music = document.createElement('button')
+music.classList.add("btn")
+music.classList.add("music")
+music.classList.add("stop")
+music.textContent = "𝄞."
+newColor.insertAdjacentElement("afterend", music)
 
 
 
@@ -50,6 +50,39 @@ newColorButton.addEventListener('click', evt => {
   colorIdx =  Math.floor(Math.random() * colors.length)         //(colorIdx + 1) % colors.length;
   calculatorDisplay.style.backgroundColor = colors[colorIdx];
 });
+
+
+const musicButton = document.querySelector(".music")
+const stopMusic = document.querySelector(".stop")
+
+
+musicButton.addEventListener("click", evt =>{
+let music = new Audio('jazz.mp3')
+music.play()
+})
+
+
+stopMusic.addEventListener("click", evt =>{
+music.stop()
+
+})
+
+
+
+
+ 
+
+musicButton.addEventListener("click", evt =>{
+ let music= new Audio('jazz.mp3')
+  music.play()
+
+})
+musicButton.addEventListener("click", evt =>{
+ 
+   music.pause()
+ 
+ })
+
 
 calculatorDisplay.style.boxShadow = '1px 1px 25px 10px'
 calculatorDisplay.style.border = "thick solid black"
@@ -121,10 +154,6 @@ function appendNumber(number) {
       displayValue = displayValue(0,display.maxlength)
       
     }
-
-
-
-  
   updateDisplay()
 }
 
@@ -138,11 +167,6 @@ function appendOperator(operator) {
   currentOperator = operator
   displayValue = '0'
 }
-
-
-
-
-
 
 
 function calculate() {
