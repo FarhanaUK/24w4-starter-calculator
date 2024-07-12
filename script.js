@@ -10,11 +10,12 @@ function updateDisplay() {
 }
 
 
-// make it flip with results in the back
 
+// stop numbers when they don't fit
+//add click sound to buttons
 // create a box with memory or what numbers where clicked and a clear button to clear all that is a pop up with a icon to pop up
-
-
+// make it flip with results in the back
+// add characters pop on the side
 
 
 const newColor = document.createElement('button')
@@ -40,11 +41,11 @@ calculatorDisplay.style.backgroundColor = 'pink'
 
 
 let colorIdx = 0;
-const colors = ["#91bec7", "#224523", "#ebbc9b", "black", "pink"];
+const colors = ["#91bec7", "#e127f2", "red", "black", "pink"];
 
 const newColorButton = document.querySelector('.color');
 newColorButton.addEventListener('click', evt => {
-  colorIdx = (colorIdx + 1) % colors.length;
+  colorIdx =  Math.floor(Math.random() * colors.length)         //(colorIdx + 1) % colors.length;
   calculatorDisplay.style.backgroundColor = colors[colorIdx];
 });
 
