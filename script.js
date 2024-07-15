@@ -29,11 +29,27 @@ btnClear.insertAdjacentElement("afterend", newColor)
 const music = document.createElement('button')
 music.classList.add("btn")
 music.classList.add("music")
-music.classList.add("stop")
 music.textContent = "𝄞."
 newColor.insertAdjacentElement("afterend", music)
 
+const musicButton = document.querySelector(".music")
 
+
+
+const sounds = new Audio('jazz.mp3');
+let musicOn = false
+
+function toggleMusic() {
+  if (musicOn) {
+    sounds.pause()
+  } else {
+    sounds.play()
+  }
+  musicOn = !musicOn
+}
+
+
+musicButton.addEventListener('click', toggleMusic)
 
 
 
@@ -51,37 +67,6 @@ newColorButton.addEventListener('click', evt => {
   calculatorDisplay.style.backgroundColor = colors[colorIdx];
 });
 
-
-const musicButton = document.querySelector(".music")
-const stopMusic = document.querySelector(".stop")
-
-
-musicButton.addEventListener("click", evt =>{
-let music = new Audio('jazz.mp3')
-music.play()
-})
-
-
-stopMusic.addEventListener("click", evt =>{
-music.stop()
-
-})
-
-
-
-
- 
-
-musicButton.addEventListener("click", evt =>{
- let music= new Audio('jazz.mp3')
-  music.play()
-
-})
-musicButton.addEventListener("click", evt =>{
- 
-   music.pause()
- 
- })
 
 
 calculatorDisplay.style.boxShadow = '1px 1px 25px 10px'
