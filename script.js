@@ -9,16 +9,7 @@ function updateDisplay() {
   display.innerText = displayValue
 }
 
-
-
-
-// create a box with music or what numbers where clicked and a clear button to clear all that is a pop up with a icon to pop up
-
-
-
-
-
-
+//added random color change button
 const newColor = document.createElement('button')
 const btnClear = document.querySelector(".btn-clear")
 newColor.classList.add("btn")
@@ -26,6 +17,20 @@ newColor.classList.add("color")
 newColor.textContent = "🎨"
 btnClear.insertAdjacentElement("afterend", newColor)
 
+const calculatorDisplay = document.querySelector('.calculator')
+calculatorDisplay.style.backgroundColor = 'pink'
+
+
+let colorIdx = 0;
+const colors = ["#91bec7", "#e127f2", "red", "black", "pink"];
+
+const newColorButton = document.querySelector('.color');
+newColorButton.addEventListener('click', () => {
+  colorIdx =  Math.floor(Math.random() * colors.length)         //(colorIdx + 1) % colors.length;
+  calculatorDisplay.style.backgroundColor = colors[colorIdx];
+});
+
+// added a music button
 const music = document.createElement('button')
 music.classList.add("btn")
 music.classList.add("music")
@@ -52,32 +57,18 @@ function toggleMusic() {
 musicButton.addEventListener('click', toggleMusic)
 
 
-
-const calculatorDisplay = document.querySelector('.calculator')
-calculatorDisplay.style.backgroundColor = 'pink'
-
-
-
-let colorIdx = 0;
-const colors = ["#91bec7", "#e127f2", "red", "black", "pink"];
-
-const newColorButton = document.querySelector('.color');
-newColorButton.addEventListener('click', evt => {
-  colorIdx =  Math.floor(Math.random() * colors.length)         //(colorIdx + 1) % colors.length;
-  calculatorDisplay.style.backgroundColor = colors[colorIdx];
-});
-
-
-
+//added a background shadow
 calculatorDisplay.style.boxShadow = '1px 1px 25px 10px'
 calculatorDisplay.style.border = "thick solid black"
 
+//added a backgound image
 const body = document.querySelector('body');
 
 body.style.backgroundImage = 'url("popart.jpg")';
 body.style.backgroundRepeat = 'no-repeat';
 body.style.backgroundSize = 'cover';
 
+//added colour change on buttin when hovering
 const buttons = document.querySelector('.buttons')
 buttons.classList.add('hover')
 const hover = document.querySelector('.hover')
@@ -91,6 +82,7 @@ hover.addEventListener('mouseout', evt => {
   hover.style.backgroundColor = ""
 })
 
+//added button click sound
 function clickSound() {
   let sound = new Audio('sound.mp3')
   sound.play()
@@ -98,7 +90,7 @@ function clickSound() {
 
 buttons.addEventListener('click', clickSound)
 
-
+//added a header "CALCULATOR"
 const header = document.createElement('h1')
 header.classList.add('title')
 header.textContent = 'CALCULATOR!!!!'
@@ -114,6 +106,7 @@ header.style.marginTop ="0px"
 header.style.marginBottom ="0px"
 body.insertAdjacentElement('afterbegin', header)
 
+//added a footer
 const footer = document.createElement('footer')
 footer.textContent = "Design By Farhana Aktar - 2024"
 footer.style.fontWeight = "bolder"
@@ -122,13 +115,7 @@ footer.style.padding = "20px"
 body.appendChild(footer)
 
 
-
-
-
-
-
-
-
+//added a limit to numbers on display
 function appendNumber(number) {
   if (displayValue === '0') {
     displayValue = number.toString()
