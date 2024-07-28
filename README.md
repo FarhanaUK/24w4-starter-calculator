@@ -6,7 +6,7 @@ This code creates a visually appealing calculator web application with HTML5, CS
 
 # STACK
 
-- Javascript
+- JavaScript
 - HTML5
 - CSS3
 - GitHub
@@ -24,4 +24,9 @@ This code creates a visually appealing calculator web application with HTML5, CS
 - I was pleasantly surprised to learn that adding a button click sound only takes four lines of code.
 
 # REFERENCES
-  
+
+  - [Calculator JavaScript](https://github.com/FarhanaUK/24w4-starter-calculator/blob/main/script.js)
+  - [Calculator HTML](https://github.com/FarhanaUK/24w4-starter-calculator/blob/main/index.html) 
+  - [Calculator CSS](https://github.com/FarhanaUK/24w4-starter-calculator/blob/main/styles.css)
+
+#### Contact Farhana Aktar:: farhanaaktar@live.co.uk
