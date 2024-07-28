@@ -17,4 +17,11 @@ This code creates a visually appealing calculator web application with HTML5, CS
 - Add multiple background music options to the toggle button.
 - History functionality that is triggered by a button.
 - Pop up a happy character when the music button is played
+
+# LEARNING UPDATE
+
+- Adding music to a button with short and simple code without having to touch the HTML file.
+- I was pleasantly surprised to learn that adding a button click sound only takes four lines of code.
+
+# REFERENCES
   
