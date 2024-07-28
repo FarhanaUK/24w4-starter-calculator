@@ -6,8 +6,15 @@ This code creates a visually appealing calculator web application with HTML5, CS
 
 # STACK
 
-- JAVASCRIPT
+- Javascript
 - HTML5
 - CSS3
-- GITHUB
-- VSCODE
+- GitHub
+- VS Code
+
+## FEATURES REQUESTED
+
+- Add multiple background music options to the toggle button.
+- History functionality that is triggered by a button.
+- Pop up a happy character when the music button is played
+  
