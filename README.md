@@ -29,4 +29,4 @@ This code creates a visually appealing calculator web application with HTML5, CS
   - [Calculator HTML](https://github.com/FarhanaUK/24w4-starter-calculator/blob/main/index.html) 
   - [Calculator CSS](https://github.com/FarhanaUK/24w4-starter-calculator/blob/main/styles.css)
 
-#### Contact Farhana Aktar:: farhanaaktar@live.co.uk
+#### Contact FarhanaUK:: farhanaaktar@live.co.uk
